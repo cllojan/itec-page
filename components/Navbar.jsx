@@ -1,17 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import Image from "next/image";
 const Nav = styled.nav`
+  position:fixed;
   width: 100vw;
   height: 80px;
-  background-color: #000;
+  background-color: transparent;
   color: #fff;
   display: flex;
+  z-index:1000;
   align-items: center;
   justify-content: space-around;
 `;
 
 const StyleLink = styled.a`
+  font-family:'Rubik',sans-serif;
+  cursor:pointer;
   font-weight: 400;
   padding: 0rem 1rem;
 `;

@@ -1,7 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
+import Slider from "../components/Slider.jsx"
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
-  return <div className={styles.container}>HOla</div>;
+  return <div className={styles.container}>
+    <main>
+      <Slider/>
+    </main>
+    <section>section</section>
+  </div>;
 }
