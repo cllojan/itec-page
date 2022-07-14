@@ -1,3 +1,10 @@
 .uwuw {
   background-color: #000;
 }
+
+.styleLink {
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+  font-weight: 400;
+  padding: 0rem 1rem;
+}

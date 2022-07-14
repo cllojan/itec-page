@@ -1,60 +1,49 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import Image from "next/image";
-const Nav = styled.nav`
-  position:fixed;
-  width: 100vw;
-  height: 80px;
-  background-color: transparent;
-  color: #fff;
-  display: flex;
-  z-index:1000;
-  align-items: center;
-  justify-content: space-around;
-`;
-
-const StyleLink = styled.a`
-  font-family:'Rubik',sans-serif;
-  cursor:pointer;
-  font-weight: 400;
-  padding: 0rem 1rem;
-`;
 
 const Navbar = () => {
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      let header = document.querySelector(".header");
+      header.classList.toggle("header_background", window.scrollY > 0);
+    });
+  });
+
   return (
-    <Nav>
+    <div className='header'>
       <div>
         <Link href='/'>
-          <StyleLink>ITEC</StyleLink>
+          <span className='styleLink'>ITEC</span>
         </Link>
       </div>
       <div>
         <Link href='/About'>
-          <StyleLink>Inicio</StyleLink>
+          <span className='styleLink'>Inicio</span>
         </Link>
         <Link href='/'>
-          <StyleLink>ITEC</StyleLink>
+          <span className='styleLink'>ITEC</span>
         </Link>
         <Link href='/'>
-          <StyleLink>Oferta Academica</StyleLink>
+          <span className='styleLink'>Oferta Academica</span>
         </Link>
         <Link href='/'>
-          <StyleLink>Itec Digital</StyleLink>
+          <span className='styleLink'>Itec Digital</span>
         </Link>
         <Link href='/'>
-          <StyleLink>Contacto</StyleLink>
+          <span className='styleLink'>Contacto</span>
         </Link>
         <Link href='/'>
-          <StyleLink>Bolsa de Empleo</StyleLink>
+          <span className='styleLink'>Bolsa de Empleo</span>
         </Link>
       </div>
       <div>
         <Link href='/'>
-          <StyleLink>Inscribirse</StyleLink>
+          <span className='styleLink'>Inscribirse</span>
         </Link>
       </div>
-    </Nav>
+    </div>
   );
 };
 
