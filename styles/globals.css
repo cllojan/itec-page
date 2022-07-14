@@ -2,7 +2,9 @@
 @import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700,800");
 
 @import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900");
-
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   padding: 0;
@@ -44,7 +46,7 @@ a {
   transition: all 0.4s ease-in-out;
 }
 .header_background {
-  background-color: #1c335f;
+  background-color: #17304a;
   color: #f4f4f4;
   transition: all 0.4s ease-in;
 
@@ -97,13 +99,23 @@ a {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
+  text-align: center;
+  padding: 40px 7.5rem;
 }
+.carreras_tecnologico {
+  font-size: 1.3em;
+}
+.carreras_tecnico {
+  font-size: 1.3em;
+}
+
 .list_carrers {
   display: grid;
   grid-template-columns: max-content max-content max-content;
   grid-column-start: auto;
   gap: 30px;
+  align-items: left;
 }
 
 .list {
@@ -118,4 +130,48 @@ a {
 .list:hover {
   transform: translateY(-10px);
   transition: 0.3s ease-in-out;
+}
+
+.oferta {
+  font-size: 2em;
+}
+
+.noticias {
+  width: 100%;
+  padding: 40px 7em;
+  text-align: center;
+  background-color: #d8eaf1;
+}
+.noticias_list {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  gap: 35px;
+}
+.list_elm {
+  width: 350px;
+  position: relative;
+  text-align: left;
+  transition: 0.4s ease-in-out;
+  background-color: #fff;
+  border-radius: 7px;
+  color: #17304a;
+}
+.list_elm:hover {
+  transform: scale(1.1);
+  transition: 0.4s ease-out;
+}
+.list_elm .cont_img {
+  width: 100%;
+  height: 20em;
+  background-image: url(../public/unnamed.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 7px 7px 0 0;
+}
+.list_info {
+  padding: 10px;
+}
+.list_info p {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
 }

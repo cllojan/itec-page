@@ -62,13 +62,11 @@ export default function Home() {
           </div>
         </div>
         <div className='carrers'>
-          <h3>Carreras</h3>
-          <div className='carrers_tecnologico'>
+          <h3 className='oferta'>Oferta Academicas</h3>
+          <div className='carreras_tecnologico'>
             <h3>Tecnologia superior</h3>
             <div className='list_carrers'>
-              <div className='list'>
-                
-              </div>
+              <div className='list'></div>
               <div className='list'></div>
               <div className='list'></div>
               <div className='list'></div>
@@ -76,11 +74,61 @@ export default function Home() {
               <div className='list'></div>
             </div>
           </div>
-          <div className='carrers_tecnico'>
+          <div className='carreras_tecnico'>
             <h3>Tecnico superior</h3>
             <div className='list_carrers'>
               <div className='list'></div>
               <div className='list'></div>
+            </div>
+          </div>
+        </div>
+        <div className='noticias'>
+          <h3>Ultimas Noticias</h3>
+          <div className='noticias_list'>
+            <div className='list_elm'>
+              <div className='cont_img'></div>
+              <div className='list_info'>
+                <h4 className='titulo'>
+                  Chris Hemsworth eligió a su personaje favorito de Stranger
+                  Things
+                </h4>
+                <p className='desc'>
+                  El actor de Marvel demostró ser un auténtico fanático de la
+                  serie con Millie Bobby Brown. Además, Taika Waititi reveló una
+                  especial conexión de la ficción de los Duffer con Thor: Love
+                  and Thunder.
+                </p>
+              </div>
+            </div>
+            <div className='list_elm'>
+              <div className='cont_img'></div>
+              <div className='list_info'>
+                <h4 className='titulo'>
+                  Chris Hemsworth eligió a su personaje favorito de Stranger
+                  Things
+                </h4>
+                <p className='desc'>
+                  El actor de Marvel demostró ser un auténtico fanático de la
+                  serie con Millie Bobby Brown. Además, Taika Waititi reveló una
+                  especial conexión de la ficción de los Duffer con Thor: Love
+                  and Thunder.
+                </p>
+              </div>
+            </div>
+            <div className='list_elm'>
+              <div className='cont_img'></div>
+              <div className='list_info'>
+                <h4 className='titulo'>
+                  Chris Hemsworth eligió a su personaje favorito de Stranger
+                  Things
+                </h4>
+                <p className='desc'>
+                  El actor de Marvel demostró ser un auténtico fanático de la
+                  serie con Millie Bobby Brown. Además, Taika Waititi reveló una
+                  especial conexión de la ficción de los Duffer con Thor: Love
+                  and Thunder.
+                </p>
+              </div>
             </div>
           </div>
         </div>
