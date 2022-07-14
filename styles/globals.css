@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700,800');
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700,800");
 
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900');
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900");
 
 html,
 body {
@@ -19,13 +19,103 @@ a {
 * {
   box-sizing: border-box;
 }
-.myswiper{
+.myswiper {
   width: 100%;
-  height: 100vh;
+  height: 140vh;
 }
 
-.swiperslide img{
+.swiperslide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: brightness(60%) contrast(90%);
+}
+
+.header {
+  position: fixed;
+  width: 100vw;
+  height: 80px;
+  background-color: transparent;
+  color: #fff;
+  display: flex;
+  z-index: 1000;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 0.4s ease-in-out;
+}
+.header_background {
+  background-color: #1c335f;
+  color: #f4f4f4;
+  transition: all 0.4s ease-in;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.styleLink {
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+  font-weight: 400;
+  padding: 0rem 1rem;
+}
+
+.features {
+  position: absolute;
+  bottom: -260px;
+  left: 100px;
+  z-index: 4;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.feature_card {
+  width: 250px;
+  height: 250px;
+  background-color: #1c335f;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.feature_card svg {
+  width: 60px;
+  height: 60px;
+  fill: #fff;
+}
+.feature_card span {
+  font-size: 1.5em;
+}
+.feature_card:hover {
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+}
+
+.carrers {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list_carrers {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  grid-column-start: auto;
+  gap: 30px;
+}
+
+.list {
+  width: 350px;
+  height: 350px;
+  background-image: url(https://itec.edu.ec/wp-content/uploads/2022/01/GESTION-DE-RIESGOS.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 7px;
+  transition: 0.3s ease-in-out;
+}
+.list:hover {
+  transform: translateY(-10px);
+  transition: 0.3s ease-in-out;
 }
