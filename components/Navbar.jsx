@@ -1,44 +1,55 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
+
+import { useRouter } from "next/router";
 import Image from "next/image";
 
 const Navbar = () => {
+  const [navbar, setNavbar] = useState(true);
+  
+  const router = useRouter();
+  
+
   useEffect(() => {
-    document.addEventListener("scroll", () => {
-      let header = document.querySelector(".header");
-      header.classList.toggle("header_background", window.scrollY > 0);
-    });
+    window.addEventListener("scroll", () => {
+      if(window.scrollY >=80){
+        setNavbar(false);
+        
+      }else{
+        setNavbar(true);
+      }
+    })
   });
 
   return (
-    <div className='header'>
+    <div className={ navbar  ? "header" : "header active"} style={{background: router.route == "/" ? "" : "#1c335f"}}>
       <div>
         <Link href='/'>
           <span className='styleLink'>ITEC</span>
         </Link>
       </div>
-      <div>
-        <Link href='/About'>
+      <div className="header__links">
+        <Link href='/'>
           <span className='styleLink'>Inicio</span>
         </Link>
-        <Link href='/'>
+        <a className="menu">
           <span className='styleLink'>ITEC</span>
-        </Link>
+          <ul className="submenu">
+            <Link href="/About"><span className="submenu__link">Vision y Mision</span></Link>
+            <Link href="/About"><span className="submenu__link">Autoridades</span></Link>
+            <Link href="/About"><span className="submenu__link">Transparencia</span></Link>
+            <Link href="/About"><span className="submenu__link">Unidad de bienestar Estudiantil</span></Link>
+
+          </ul>
+        </a>
         <Link href='/'>
           <span className='styleLink'>Oferta Academica</span>
         </Link>
-        <Link href='/'>
-          <span className='styleLink'>Itec Digital</span>
-        </Link>
+
         <Link href='/'>
           <span className='styleLink'>Contacto</span>
         </Link>
-        <Link href='/'>
-          <span className='styleLink'>Bolsa de Empleo</span>
-        </Link>
-      </div>
-      <div>
         <Link href='/'>
           <span className='styleLink'>Inscribirse</span>
         </Link>
