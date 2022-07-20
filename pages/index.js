@@ -63,6 +63,7 @@ export default function Home() {
         </div>
         <div className='carrers'>
           <h3 className='oferta'>Oferta Academicas</h3>
+          <hr />
           <div className='carreras_tecnologico'>
             <h3>Tecnologia superior</h3>
             <div className='list_carrers'>
@@ -130,6 +131,13 @@ export default function Home() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+        <div className='convenios'>
+          <h3>Convenios</h3>
+          <div className='list_convenios'>
+            <div className="convenio"></div>
+            <div className="convenio"></div>
           </div>
         </div>
       </section>
