@@ -1,9 +1,12 @@
 import React, { useEffect,useState } from "react";
-import styled from "styled-components";
-import Link from "next/link";
 
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faAngleDown
+} from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/router";
-import Image from "next/image";
+
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(true);
@@ -33,16 +36,22 @@ const Navbar = () => {
         <Link href='/'>
           <span className='styleLink'>Inicio</span>
         </Link>
-        <a className="menu">
-          <span className='styleLink'>ITEC</span>
+        <div className="menu">
+          <span className='styleLink'>Itec<FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10 }}/></span>
           <ul className="submenu">
             <Link href="/About"><span className="submenu__link">Vision y Mision</span></Link>
             <Link href="/About"><span className="submenu__link">Autoridades</span></Link>
-            <Link href="/About"><span className="submenu__link">Transparencia</span></Link>
+            <div className="menu_tp submenu__link">
+              <span className='styleLink'>Transparencia<FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10 }}/></span>
+              <ul className="submenu_tp">
+                <Link href="/About"><span className="submenu__link">Vision y Mision</span></Link>
+                <Link href="/About"><span className="submenu__link">Autoridades</span></Link>
+              </ul>
+            </div>
             <Link href="/About"><span className="submenu__link">Unidad de bienestar Estudiantil</span></Link>
 
           </ul>
-        </a>
+        </div>
         <Link href='/'>
           <span className='styleLink'>Oferta Academica</span>
         </Link>

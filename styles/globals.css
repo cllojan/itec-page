@@ -49,9 +49,13 @@ li{
   align-items: center;
   justify-content: space-around;
   transition: all 0.4s ease-in-out;
+  
 }
+
 .header.active{
-  background-color: #1c335f;
+  background-color: #fff;
+  color: #17202A;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 .header_background {
   width: 100vw;
@@ -70,8 +74,8 @@ li{
   font-family: "Rubik", sans-serif;
   cursor: pointer;
   font-weight: 400;
-  padding: 1rem 0;
-  
+  padding: 1rem 1rem;
+  text-align: center;
 }
 
 .features {
@@ -235,27 +239,46 @@ li{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:30px;
+  
 }
 
 
 .submenu{
   padding:10px;
   width: 230px;
-  background-color: #17304a;
+  background-color: #fff;
   position: absolute;
   display: none;
   flex-direction: column;
-  
+  left: 15px;
   
 }
 .submenu__link{
   cursor:pointer;
+
   padding:10px 5px;
   
   font-family: "Rubik", sans-serif;
   margin: 0 20px;
 }
 .submenu .submenu__link:hover{
-  background-color: #1e64e6;
+  background-color: #00000050;
+}
+.menu_tp{
+  transition: 0.5s ease;
+}
+.menu_tp:hover .submenu_tp{
+  display: flex;
+  transition:all  0.5s ease;
+}
+.submenu_tp{
+  width: 200px;
+  border:2px solid #000;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: #fff;
+  top:0;
+  right:-230px;
+  transition:all 0.5s ease-in;
 }
