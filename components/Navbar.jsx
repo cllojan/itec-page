@@ -42,19 +42,33 @@ const Navbar = () => {
             <Link href="/About"><span className="submenu__link">Vision y Mision</span></Link>
             <Link href="/About"><span className="submenu__link">Autoridades</span></Link>
             <div className="menu_tp submenu__link">
-              <span className='styleLink'>Transparencia<FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10 }}/></span>
+              <span >Transparencia<FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10 }}/></span>
               <ul className="submenu_tp">
-                <Link href="/About"><span className="submenu__link">Vision y Mision</span></Link>
-                <Link href="/About"><span className="submenu__link">Autoridades</span></Link>
+                <Link href="/About"><span className="submenu__link_tp">Vision y Mision</span></Link>
+                <Link href="/About"><span className="submenu__link_tp">Autoridades</span></Link>
               </ul>
             </div>
             <Link href="/About"><span className="submenu__link">Unidad de bienestar Estudiantil</span></Link>
 
           </ul>
         </div>
-        <Link href='/'>
-          <span className='styleLink'>Oferta Academica</span>
-        </Link>
+        <div className="menu">
+        <span className='styleLink'>Oferta Academica<FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10}}/></span>
+          <ul className="submenu__oferta">
+            <Link href="/About"><span className="submenu__link">Vision y Mision</span></Link>
+            <Link href="/About"><span className="submenu__link">Autoridades</span></Link>
+            <div className="menu_tp submenu__link">
+              <span >Transparencia<FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10 }}/></span>
+              <ul className="submenu_tp">
+                <Link href="/About"><span className="submenu__link_tp">Vision y Mision</span></Link>
+                <Link href="/About"><span className="submenu__link_tp">Autoridades</span></Link>
+              </ul>
+            </div>
+            <Link href="/About"><span className="submenu__link">Unidad de bienestar Estudiantil</span></Link>
+
+          </ul>
+        </div>
+        
 
         <Link href='/'>
           <span className='styleLink'>Contacto</span>
