@@ -55,16 +55,26 @@ const Navbar = () => {
         <div className="menu">
         <span className='styleLink'>Oferta Academica<FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10}}/></span>
           <ul className="submenu__oferta">
-            <Link href="/About"><span className="submenu__link">Vision y Mision</span></Link>
-            <Link href="/About"><span className="submenu__link">Autoridades</span></Link>
+            
             <div className="menu_tp submenu__link">
-              <span >Transparencia<FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10 }}/></span>
-              <ul className="submenu_tp">
-                <Link href="/About"><span className="submenu__link_tp">Vision y Mision</span></Link>
-                <Link href="/About"><span className="submenu__link_tp">Autoridades</span></Link>
+              <span >Carreras de nivel tecnologico Superior</span><FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10 }}/>
+              <ul className="submenu_tecnologico">
+                <Link href="/About"><span className="submenu__link_tp">Estetica Integral</span></Link>
+                <Link href="/About"><span className="submenu__link_tp">Gestion de Riesgos</span></Link>
+                <Link href="/About"><span className="submenu__link_tp">Comercio Exterior</span></Link>
+                <Link href="/About"><span className="submenu__link_tp">Negocios Agropecuarios</span></Link>
+                <Link href="/About"><span className="submenu__link_tp">Desarrollo de Software</span></Link>
+                <Link href="/About"><span className="submenu__link_tp">Talento Humano</span></Link>
               </ul>
             </div>
-            <Link href="/About"><span className="submenu__link">Unidad de bienestar Estudiantil</span></Link>
+            <div className="menu_tp submenu__link">
+              <span >Carreras de nivel tecnico Superior</span><FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:42 }}/>
+              <ul className="submenu_tecnico">
+                <Link href="/About"><span className="submenu__link_tp">Mecanica Automotriz</span></Link>
+                <Link href="/About"><span className="submenu__link_tp">Guia Nacional de Turismo</span></Link>
+              </ul>
+            </div>
+            <Link href="/About"><span className="submenu__link">Educacion Continua</span></Link>
 
           </ul>
         </div>

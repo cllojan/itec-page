@@ -245,7 +245,7 @@ li{
 
 
 .submenu{
-  
+  transition:all 0.5s ease-in;
   width: 230px;
   background-color: #fff;
   position: fixed;
@@ -279,6 +279,7 @@ li{
 .submenu__link_tp:hover{
   color:#17202a75; 
 }
+
 .menu_tp:hover .submenu_tp{
   display: flex;
 }
@@ -292,8 +293,8 @@ li{
   position: fixed;
   background-color: #fff;
   top:150px;
-  right:215px;
-  transition:all 0.5s ease-in;
+  right:210px;
+  
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 .submenu__oferta{
@@ -311,4 +312,43 @@ li{
 .menu:hover  .submenu__oferta{
   display:flex;
   
+}
+.menu_tp:hover .submenu_tecnologico{
+  
+  display: flex;
+  
+  
+}
+.menu_tp:hover .submenu_tecnico{
+  display: flex;
+  
+}
+
+.submenu_tecnologico{
+  
+  padding:10px;
+  width: 200px;
+  
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: #fff;
+  top:0px;
+  right:-205px;
+  
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.submenu_tecnico{
+  padding:10px;
+  width: 200px;
+  
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: #fff;
+  top:70px;
+  right:-205px;
+  
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
