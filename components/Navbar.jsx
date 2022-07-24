@@ -43,9 +43,9 @@ const Navbar = () => {
             <Link href="/About"><span className="submenu__link">Autoridades</span></Link>
             <div className="menu_tp submenu__link">
               <span >Transparencia<FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10 }}/></span>
-              <ul className="submenu_tp">
-                <Link href="/About"><span className="submenu__link_tp">Vision y Mision</span></Link>
-                <Link href="/About"><span className="submenu__link_tp">Autoridades</span></Link>
+              <ul className="submenu_tp submenu_tc">
+                <Link href="/About"><span className="submenu__link_tp">PEDI</span></Link>
+                <Link href="/About"><span className="submenu__link_tp">Rendicion de Cuentas 2019</span></Link>
               </ul>
             </div>
             <Link href="/About"><span className="submenu__link">Unidad de bienestar Estudiantil</span></Link>
@@ -58,7 +58,7 @@ const Navbar = () => {
             
             <div className="menu_tp submenu__link">
               <span >Carreras de nivel tecnologico Superior</span><FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10 }}/>
-              <ul className="submenu_tecnologico">
+              <ul className="submenu_tecnologico submenu_tc">
                 <Link href="/About"><span className="submenu__link_tp">Estetica Integral</span></Link>
                 <Link href="/About"><span className="submenu__link_tp">Gestion de Riesgos</span></Link>
                 <Link href="/About"><span className="submenu__link_tp">Comercio Exterior</span></Link>
@@ -69,7 +69,7 @@ const Navbar = () => {
             </div>
             <div className="menu_tp submenu__link">
               <span >Carreras de nivel tecnico Superior</span><FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:42 }}/>
-              <ul className="submenu_tecnico">
+              <ul className="submenu_tecnico submenu_tc">
                 <Link href="/About"><span className="submenu__link_tp">Mecanica Automotriz</span></Link>
                 <Link href="/About"><span className="submenu__link_tp">Guia Nacional de Turismo</span></Link>
               </ul>
