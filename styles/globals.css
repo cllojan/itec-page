@@ -393,6 +393,14 @@ li{
   list-style: none;
 }
 
+.btn__ins{
+  background-color: #c4302B;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+.btn__color{
+  color:#fff;
+}
 
 
 .redes{

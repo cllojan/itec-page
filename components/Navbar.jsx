@@ -43,7 +43,7 @@ const Navbar = () => {
             <Link href="/About"><span className="submenu__link">Autoridades</span></Link>
             <div className="menu_tp submenu__link ">
               <span >Transparencia<FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10 }}/></span>
-              <ul className="submenu_tp ">
+              <ul className="submenu_tp submenu_tc">
                 <Link href="/About"><span className="submenu__link_tp">PEDI</span></Link>
                 <Link href="/About"><span className="submenu__link_tp">Rendicion de Cuentas 2019</span></Link>
               </ul>
@@ -83,8 +83,8 @@ const Navbar = () => {
         <Link href='/'>
           <span className='styleLink'>Contacto</span>
         </Link>
-        <Link href='/'>
-          <span className='styleLink'>Inscribirse</span>
+        <Link href='/' >
+          <span className={navbar  ? "styleLink btn__ins " : "styleLink btn__ins btn__color" }>Inscribirse</span>
         </Link>
       </div>
     </div>
