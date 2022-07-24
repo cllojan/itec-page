@@ -38,12 +38,12 @@ const Navbar = () => {
         </Link>
         <div className="menu">
           <span className='styleLink'>Itec<FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10 }}/></span>
-          <ul className="submenu">
+          <ul className="submenu submenu_tc">
             <Link href="/About"><span className="submenu__link">Vision y Mision</span></Link>
             <Link href="/About"><span className="submenu__link">Autoridades</span></Link>
-            <div className="menu_tp submenu__link">
+            <div className="menu_tp submenu__link ">
               <span >Transparencia<FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10 }}/></span>
-              <ul className="submenu_tp submenu_tc">
+              <ul className="submenu_tp ">
                 <Link href="/About"><span className="submenu__link_tp">PEDI</span></Link>
                 <Link href="/About"><span className="submenu__link_tp">Rendicion de Cuentas 2019</span></Link>
               </ul>
@@ -52,11 +52,11 @@ const Navbar = () => {
 
           </ul>
         </div>
-        <div className="menu">
+        <div className="menu ">
         <span className='styleLink'>Oferta Academica<FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10}}/></span>
-          <ul className="submenu__oferta">
+          <ul className="submenu__oferta submenu_tc ">
             
-            <div className="menu_tp submenu__link">
+            <div className="menu_tp submenu__link  ">
               <span >Carreras de nivel tecnologico Superior</span><FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10 }}/>
               <ul className="submenu_tecnologico submenu_tc">
                 <Link href="/About"><span className="submenu__link_tp">Estetica Integral</span></Link>
@@ -67,9 +67,9 @@ const Navbar = () => {
                 <Link href="/About"><span className="submenu__link_tp">Talento Humano</span></Link>
               </ul>
             </div>
-            <div className="menu_tp submenu__link">
+            <div className="menu_tp submenu__link ">
               <span >Carreras de nivel tecnico Superior</span><FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:42 }}/>
-              <ul className="submenu_tecnico submenu_tc">
+              <ul className="submenu_tecnico submenu_tc submenu_tc">
                 <Link href="/About"><span className="submenu__link_tp">Mecanica Automotriz</span></Link>
                 <Link href="/About"><span className="submenu__link_tp">Guia Nacional de Turismo</span></Link>
               </ul>
