@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from "react";
-
+import fetcher from "../lib/strapi-client"
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,7 +8,9 @@ import {
 import { useRouter } from "next/router";
 
 
-const Navbar = () => {
+
+
+const Navbar = ({data}) => {
   const [navbar, setNavbar] = useState(true);
   
   const router = useRouter();
@@ -23,11 +25,13 @@ const Navbar = () => {
         setNavbar(true);
       }
     })
+    
   });
 
   return (
-    <div className={ navbar  ? "header" : "header active"} style={{background: router.route == "/" ? "" : "#1c335f"}}>
+    <div className={ navbar  ? "header" : "header active"} style={router.route == "/" ? {position: "fixed"}:{position: "relative",color:"#17202A"}}>
       <div>
+        
         <Link href='/'>
           <span className='styleLink'>ITEC</span>
         </Link>
@@ -59,19 +63,19 @@ const Navbar = () => {
             <div className="menu_tp submenu__link  ">
               <span >Carreras de nivel tecnologico Superior</span><FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10 }}/>
               <ul className="submenu_tecnologico submenu_tc">
-                <Link href="/Carreras/Estetica Integral"><span className="submenu__link_tp">Estetica Integral</span></Link>
-                <Link href="/About"><span className="submenu__link_tp">Gestion de Riesgos</span></Link>
-                <Link href="/About"><span className="submenu__link_tp">Comercio Exterior</span></Link>
-                <Link href="/About"><span className="submenu__link_tp">Negocios Agropecuarios</span></Link>
-                <Link href="/About"><span className="submenu__link_tp">Desarrollo de Software</span></Link>
-                <Link href="/About"><span className="submenu__link_tp">Talento Humano</span></Link>
+                <Link href="/Carreras/1"><span className="submenu__link_tp">Estetica Integral</span></Link>
+                <Link href="/Carreras/Gestion_de_Riesgos"><span className="submenu__link_tp">Gestion de Riesgos</span></Link>
+                <Link href="/Carreras/Comercio_Exterior"><span className="submenu__link_tp">Comercio Exterior</span></Link>
+                <Link href="/Carreras/Negocios_Agropecuarios"><span className="submenu__link_tp">Negocios Agropecuarios</span></Link>
+                <Link href="/Carreras/Desarrollo_de_Software"><span className="submenu__link_tp">Desarrollo de Software</span></Link>
+                <Link href="/Carreras/Talento_Humano"><span className="submenu__link_tp">Talento Humano</span></Link>
               </ul>
             </div>
             <div className="menu_tp submenu__link ">
               <span >Carreras de nivel tecnico Superior</span><FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:42 }}/>
               <ul className="submenu_tecnico submenu_tc submenu_tc">
-                <Link href="/About"><span className="submenu__link_tp">Mecanica Automotriz</span></Link>
-                <Link href="/About"><span className="submenu__link_tp">Guia Nacional de Turismo</span></Link>
+                <Link href="/Carreras/Mecanica_Automotriz"><span className="submenu__link_tp">Mecanica Automotriz</span></Link>
+                <Link href="/Carreras/Guia_Nacional_de_Turismo"><span className="submenu__link_tp">Guia Nacional de Turismo</span></Link>
               </ul>
             </div>
             <Link href="/About"><span className="submenu__link">Educacion Continua</span></Link>
@@ -84,11 +88,24 @@ const Navbar = () => {
           <span className='styleLink'>Contacto</span>
         </Link>
         <Link href='/' >
-          <span className={navbar  ? "styleLink btn__ins " : "styleLink btn__ins btn__color" }>Inscribirse</span>
+          <span className={navbar  ? "styleLink btn__ins " : "styleLink btn__ins btn__color" } style={router.route == "/" ? {color:"#fff"}:{color:"#fff"}}>Inscribirse</span>
         </Link>
       </div>
     </div>
   );
 };
-
+export async function getStaticProps(){
+  try {
+    const url = "https://reqres.in/api/users"
+    const res = await fetcher(`${process.env.STRAPI_API_URL}/carreras?publicationState=preview`);
+    console.log(res)
+    return {
+      props:{
+        data:res
+      }
+    }
+  } catch (error) {
+    console.log(error) 
+  }
+}
 export default Navbar;

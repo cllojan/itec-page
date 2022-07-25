@@ -61,11 +61,11 @@ li{
 }
 .header_background {
   width: 100vw;
-  
+ 
 
   color: #fff;
   display: flex;
-  z-index: 1000;
+  
   align-items: center;
   justify-content: space-around;
   transition: all 0.4s ease-in-out;
