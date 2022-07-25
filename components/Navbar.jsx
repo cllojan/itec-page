@@ -59,7 +59,7 @@ const Navbar = () => {
             <div className="menu_tp submenu__link  ">
               <span >Carreras de nivel tecnologico Superior</span><FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10 }}/>
               <ul className="submenu_tecnologico submenu_tc">
-                <Link href="/About"><span className="submenu__link_tp">Estetica Integral</span></Link>
+                <Link href="/Carreras/Estetica Integral"><span className="submenu__link_tp">Estetica Integral</span></Link>
                 <Link href="/About"><span className="submenu__link_tp">Gestion de Riesgos</span></Link>
                 <Link href="/About"><span className="submenu__link_tp">Comercio Exterior</span></Link>
                 <Link href="/About"><span className="submenu__link_tp">Negocios Agropecuarios</span></Link>

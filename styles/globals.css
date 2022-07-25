@@ -260,7 +260,7 @@ li{
 .submenu__link{
   cursor:pointer;
   
-  padding:10px 5px;
+  padding:10px 15px;
   
   font-family: "Rubik", sans-serif;
   
@@ -268,7 +268,7 @@ li{
 .submenu__link_tp{
   cursor:pointer;
   color:#17202a;
-  padding:15px 5px;
+  padding:15px 15px;
   
   font-family: "Rubik", sans-serif;
   
@@ -294,9 +294,12 @@ li{
   position: fixed;
   background-color: #fff;
   top:150px;
-  right:210px;
+  right:215px;
   
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  
+  box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
+-webkit-box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
+-moz-box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
 }
 .submenu__oferta{
   
@@ -308,7 +311,9 @@ li{
   right: 315px;
   color:#17202A;
   
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
+-webkit-box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
+-moz-box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
 }
 .menu:hover  .submenu__oferta{
   display:flex;
@@ -335,9 +340,11 @@ li{
   position: absolute;
   background-color: #fff;
   top:0px;
-  right:-205px;
+  right:-200px;
   
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
+-webkit-box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
+-moz-box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
 }
 
 .submenu_tecnico{
@@ -349,13 +356,15 @@ li{
   position: absolute;
   background-color: #fff;
   top:70px;
-  right:-205px;
+  right:-200px;
   
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
+-webkit-box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
+-moz-box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
 }
 
 .submenu_tc{
-  padding:10px 20px;
+  padding:10px 0px;
 }
 .submenu_tc::after{
   width: 100%;
