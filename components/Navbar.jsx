@@ -12,19 +12,10 @@ import { useRouter } from "next/router";
 
 export default function Navbar() {
   const [navbar, setNavbar] = useState(true);
-  const [tecnologicas, setTecnologicas] = useState(null);
+  const [tecnologicas, setTecnologicas] = useState([]);
   const [tecnicas, setTecnicas] = useState(null);
   const router = useRouter();
-  
-  
   //https://firestore.googleapis.com/v1/projects/itec-data/databases/(default)/documents/carreras
-  const cargarDatos = async () =>{
-    let res = await fetch("https://firestore.googleapis.com/v1/projects/itec-data/databases/(default)/documents/carreras");
-    let data = await res.json()
-    data.documents.map( x => x["fields"].Tipo["stringValue"] == "tecnologico" ? setTecnologicas(x["fields"]) : setTecnicas(x));
-    
-  }
-  cargarDatos()
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if(window.scrollY >=80){
@@ -34,12 +25,18 @@ export default function Navbar() {
         setNavbar(true);
       }
     })
-    
-  });
-  console.log(tecnologicas);
+    /*
+    fetch("https://firestore.googleapis.com/v1/projects/itec-data/databases/(default)/documents/carreras")
+      .then(response => response.json())
+      .then(res => setTecnologicas(res))
+      .catch(err => console.log(err))
+    */
+  },[]);
+  //setTecnicas(Object.keys(tecnologicas.documents));
+  
   return (
     <div className={ navbar  ? "header" : "header active"} style={router.route == "/" ? {position: "fixed"}:{position: "relative",color:"#17202A"}}>
-      
+
       <div>
         
         <Link href='/'>
@@ -73,7 +70,8 @@ export default function Navbar() {
             <div className="menu_tp submenu__link  ">
               <span >Carreras de nivel tecnologico Superior</span><FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10 }}/>
               <ul className="submenu_tecnologico submenu_tc">
-                <Link href="/Carreras/1"><span className="submenu__link_tp">Estetica Integral</span></Link>
+                
+                <Link href="/Carreras/Estetica_Integral"><span className="submenu__link_tp">Estetica Integral</span></Link>
                 <Link href="/Carreras/Gestion_de_Riesgos"><span className="submenu__link_tp">Gestion de Riesgos</span></Link>
                 <Link href="/Carreras/Comercio_Exterior"><span className="submenu__link_tp">Comercio Exterior</span></Link>
                 <Link href="/Carreras/Negocios_Agropecuarios"><span className="submenu__link_tp">Negocios Agropecuarios</span></Link>
