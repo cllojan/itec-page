@@ -10,12 +10,21 @@ import { useRouter } from "next/router";
 
 
 
-const Navbar = ({data}) => {
+export default function Navbar() {
   const [navbar, setNavbar] = useState(true);
-  
+  const [tecnologicas, setTecnologicas] = useState(null);
+  const [tecnicas, setTecnicas] = useState(null);
   const router = useRouter();
   
-
+  
+  //https://firestore.googleapis.com/v1/projects/itec-data/databases/(default)/documents/carreras
+  const cargarDatos = async () =>{
+    let res = await fetch("https://firestore.googleapis.com/v1/projects/itec-data/databases/(default)/documents/carreras");
+    let data = await res.json()
+    data.documents.map( x => x["fields"].Tipo["stringValue"] == "tecnologico" ? setTecnologicas(x["fields"]) : setTecnicas(x));
+    
+  }
+  cargarDatos()
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if(window.scrollY >=80){
@@ -27,9 +36,10 @@ const Navbar = ({data}) => {
     })
     
   });
-
+  console.log(tecnologicas);
   return (
     <div className={ navbar  ? "header" : "header active"} style={router.route == "/" ? {position: "fixed"}:{position: "relative",color:"#17202A"}}>
+      
       <div>
         
         <Link href='/'>
@@ -94,18 +104,3 @@ const Navbar = ({data}) => {
     </div>
   );
 };
-export async function getStaticProps(){
-  try {
-    const url = "https://reqres.in/api/users"
-    const res = await fetcher(`${process.env.STRAPI_API_URL}/carreras?publicationState=preview`);
-    console.log(res)
-    return {
-      props:{
-        data:res
-      }
-    }
-  } catch (error) {
-    console.log(error) 
-  }
-}
-export default Navbar;
