@@ -565,3 +565,52 @@ li{
   list-style: circle;
   text-align: left;
 }
+.contacto{
+  margin-top: 150px;
+  margin:150px 50px ;
+  width: 100%;
+  
+  display: grid;
+  grid-template-columns: 600px 600px;
+  align-items: center;
+  
+}
+
+.cont__form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+.cont__form input{
+  padding-left: 10px;
+  border: 1px solid #17202a;
+  border-radius: 0;
+  height: 40px;
+  
+}
+
+.cont__form input::placeholder{
+  font-weight: 300;
+  font-size: 14px;
+
+}
+.cont__form textarea{
+  border: 1px solid #17202a;
+  border-radius: 0;
+}
+.cont__form button{
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  border: none;
+  background-color: #1e64e6;
+  color: #d8eaf1;
+  font-weight: 500;
+}
+.cont__form span{
+  font-size: 20px;
+}
+.cont__info h4{
+  font-weight: 400;
+}
