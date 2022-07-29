@@ -86,13 +86,13 @@ export default function Navbar() {
                 <Link href="/Carreras/Guia_Nacional_de_Turismo"><span className="submenu__link_tp">Guia Nacional de Turismo</span></Link>
               </ul>
             </div>
-            <Link href="/About"><span className="submenu__link">Educacion Continua</span></Link>
+            <Link href="/#"><span className="submenu__link">Educacion Continua</span></Link>
 
           </ul>
         </div>
         
 
-        <Link href='/'>
+        <Link href='/Contacto'>
           <span className='styleLink'>Contacto</span>
         </Link>
         <Link href='/' >

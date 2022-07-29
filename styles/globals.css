@@ -452,7 +452,7 @@ li{
   color:#c4302B;
 }
 .center_carrers{
-  
+  margin-top: 140px;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -468,9 +468,25 @@ li{
   justify-content: left;
   text-align: justify;
 }
+.carrera_cont a{
+  position: relative;
+  font-weight: 600;
+  text-align: center;
+  width: 90px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #1e64e6;
+}
+.carrera_cont a::after{
+  position: absolute;
+  left:5px;
+  color:#fff;
+  bottom:5px;
+  content: "Descargar";
+}
 .cont_mv{
   margin-top: 140px;
-  margin-left:250px;
+  margin-left:280px;
   
 }
 
@@ -518,18 +534,34 @@ li{
   margin-left: 185px;
 }
 .cont_autoridades{
-  
-  display: flex;
-  
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
+  margin-left: 185px;
+  display: grid;
+  grid-template-columns: max-content  max-content max-content;
 }
 .cont_autoridades img{
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
 }
 .autoridades{
-  width: 300px;
+  display: grid;
+  grid-template-rows: max-content max-content max-content 1fr;
+  
+  width: 350px;
+  
+}
+.autoridades h4{
+  font-size: 17px;
+}
+.autoridades span{
+  font-size: 17px ;
+  font-weight: 500;
+  color: #1e64e6;
+}
+.correo_a{
+  cursor: pointer;
+}
+.autoridades ul li{
+  list-style: circle;
+  text-align: left;
 }

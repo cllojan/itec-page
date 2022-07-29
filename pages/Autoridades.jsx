@@ -31,7 +31,7 @@ const Autoridades = () => {
             <h4>Md. Claudio Rolando Rodríguez Arteaga</h4>
             <span>PRESIDENTE DEL CONSEJO GUBERNATIVO </span>
             <p>Médico veterinario zootecnista</p>
-            <span>administracion@itec.edu.ec</span>
+            <span className='correo_a'>administracion@itec.edu.ec</span>
         </div>
     </div>
     </div>
