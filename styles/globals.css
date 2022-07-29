@@ -3,7 +3,8 @@
 
 @import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900");
 html {
-  scroll-behavior: smooth;
+  
+  overflow-x: hidden;
 }
 html,
 body {
@@ -234,7 +235,8 @@ li{
   display: block;
 }
 .menu:hover  .submenu,.submenu__oferta{
-  display:flex;
+  visibility: visible;
+  opacity: 1;
   
 }
 .header__links{
@@ -246,15 +248,18 @@ li{
 
 
 .submenu{
-  transition:all 0.5s ease-in;
+  
   width: 230px;
   background-color: #fff;
   position: fixed;
-  display: none;
+  visibility: hidden;
+  display: flex;
   flex-direction: column;
   right: 415px;
   color:#17202A;
-  
+  opacity: 0;
+  transition: opacity .5s;  
+  transition:all 0.4s ease-in;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 .submenu__link{
@@ -282,20 +287,23 @@ li{
 }
 
 .menu_tp:hover .submenu_tp{
-  display: flex;
+  visibility: visible;
+  opacity: 1;
 }
 .submenu_tp{
   
   padding:10px;
   width: 200px;
-  
-  display: none;
+  visibility: hidden;
+  display: flex;
   flex-direction: column;
   position: fixed;
   background-color: #fff;
   top:150px;
   right:215px;
-  
+  opacity: 0;
+  transition: opacity .5s;
+  transition: 0.4s ease;
   
   box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
 -webkit-box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
@@ -306,28 +314,32 @@ li{
   width: 230px;
   background-color: #fff;
   position: fixed;
-  display: none;
+  visibility: hidden;
+  display: flex;
   flex-direction: column;
   right: 315px;
   color:#17202A;
-  
+  opacity: 0;
+  transition: opacity .4s ;
+  transition: 0.4s ease;
   box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
 -webkit-box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
 -moz-box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
 }
 .menu:hover  .submenu__oferta{
-  display:flex;
+  visibility: visible;
+  opacity: 1;
   
 }
 .menu_tp:hover .submenu_tecnologico{
   
-  display: flex;
-  
+  visibility: visible;
+  opacity: 1;
   
 }
 .menu_tp:hover .submenu_tecnico{
-  display: flex;
-  
+  visibility: visible;
+  opacity: 1;
 }
 
 .submenu_tecnologico{
@@ -335,13 +347,16 @@ li{
   padding:10px;
   width: 200px;
   
-  display: none;
+  visibility: hidden;
+  display: flex;
   flex-direction: column;
   position: absolute;
   background-color: #fff;
   top:0px;
   right:-200px;
-  
+  opacity: 0;
+  transition: opacity .5s;
+  transition: 0.4s ease;
   box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
 -webkit-box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
 -moz-box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
@@ -351,13 +366,16 @@ li{
   padding:10px;
   width: 200px;
   
-  display: none;
+  visibility: hidden;
+  display: flex;
   flex-direction: column;
   position: absolute;
   background-color: #fff;
   top:70px;
   right:-200px;
-  
+  opacity: 0;
+  transition: opacity .5s;
+  transition: 0.4s ease;
   box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
 -webkit-box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
 -moz-box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.97);
@@ -382,6 +400,7 @@ li{
   background-color: #17202A;
   width: 100%;
   padding:50px 0px;
+  
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -431,4 +450,86 @@ li{
 }
 .youtube{
   color:#c4302B;
+}
+.center_carrers{
+  
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  font-family: "Quicksand", BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+.carrera_cont{
+  width: 60%;
+  
+  display:flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: justify;
+}
+.cont_mv{
+  margin-top: 140px;
+  margin-left:250px;
+  
+}
+
+.mv{
+  
+  width:70%;
+  display:flex;
+  flex-direction: column;
+  justify-content: left;
+  gap:40px;
+  text-align: justify;
+}
+.mv img{
+  width: 350px ;
+
+  height: 350px;
+  object-fit: cover;
+}
+
+.mision,.vision{
+  display: flex;
+  flex-direction: row;
+  gap:40px;
+  
+  text-align: justify;
+  
+}
+.vision{
+  flex-direction: row-reverse;
+}
+.cont_mv h3{
+  position: relative;
+  color: #17304a;
+  font-size: 27px;
+}
+
+.cont_a{
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+.titulo_a{
+  margin-left: 185px;
+}
+.cont_autoridades{
+  
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.cont_autoridades img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.autoridades{
+  width: 300px;
 }

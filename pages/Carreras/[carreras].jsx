@@ -2,6 +2,11 @@ import React from 'react'
 import { useRouter } from 'next/router';
 import Head from 'next/head'
 import {data} from "./data";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faListRadio,
+  
+} from "@fortawesome/free-solid-svg-icons";
 const carreras = () => {
   /* 
     To this URL: https://localhost:1337/api/<content>
@@ -11,12 +16,20 @@ const carreras = () => {
   let ruta = router.query.carreras;
   console.log(data);
   return (
-    <div>
+    <div className='center_carrers'>
     <Head>
     <title>{String(ruta).replace(/\_/gi," ")}</title>
     </Head>
     {/* the rest of the JSX */}
-    a
+      <div className="carrera_cont">
+        <h1>{data[ruta].Nombre}</h1>
+        <h3>Caracteristicas</h3>
+        <p>{data[ruta].Caracteristicas}</p>
+        <h3>Perfil Profesional</h3>
+        <p>{data[ruta].perfil}</p>
+        <FontAwesomeIcon icon={faListRadio} style={{fontSize:10}}/>
+        <a href={data[ruta].Malla}>Malla</a>
+      </div>
     </div>
     )
   

@@ -35,7 +35,7 @@ export default function Navbar() {
   //setTecnicas(Object.keys(tecnologicas.documents));
   
   return (
-    <div className={ navbar  ? "header" : "header active"} style={router.route == "/" ? {position: "fixed"}:{position: "relative",color:"#17202A"}}>
+    <div className={ navbar  ? "header" : "header active"} style={router.route == "/" ? {position: "fixed"}:{backgroundColor:"#fff",color:"#17202A",top:0}}>
 
       <div>
         
@@ -50,16 +50,16 @@ export default function Navbar() {
         <div className="menu">
           <span className='styleLink'>Itec<FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10 }}/></span>
           <ul className="submenu submenu_tc">
-            <Link href="/About"><span className="submenu__link">Vision y Mision</span></Link>
-            <Link href="/About"><span className="submenu__link">Autoridades</span></Link>
+            <Link href="/Mision_y_Vision"><span className="submenu__link">Vision y Mision</span></Link>
+            <Link href="/Autoridades"><span className="submenu__link">Autoridades</span></Link>
             <div className="menu_tp submenu__link ">
               <span >Transparencia<FontAwesomeIcon icon={faAngleDown} style={{ fontSize: 15, marginLeft:10 }}/></span>
               <ul className="submenu_tp submenu_tc">
-                <Link href="/About"><span className="submenu__link_tp">PEDI</span></Link>
-                <Link href="/About"><span className="submenu__link_tp">Rendicion de Cuentas 2019</span></Link>
+                <Link href="https://itec.edu.ec/wp-content/uploads/2020/08/PEDI.pdf"><span className="submenu__link_tp">PEDI</span></Link>
+                <Link href="https://itec.edu.ec/wp-content/uploads/2020/09/Informe-de-Rendici%C3%B3n-de-Cuentas-2019.pdf"><span className="submenu__link_tp">Rendicion de Cuentas 2019</span></Link>
               </ul>
             </div>
-            <Link href="/About"><span className="submenu__link">Unidad de bienestar Estudiantil</span></Link>
+            
 
           </ul>
         </div>
